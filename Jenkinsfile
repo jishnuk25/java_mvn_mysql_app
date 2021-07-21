@@ -17,13 +17,13 @@ pipeline {
                 sh 'mvn clean install'
             }
         }
-        stage('Build container image') {
-            steps {
-                dir("target/") {
-                sh 'pwd'
-                build "${ARTIFACTID}:${VERSION}"
-                }
+        stage('Run') {
+            agent {
+                dockerfile true
             }
-        }   
+            steps {
+                echo "running container"
+            }
+        } 
     }
 }
