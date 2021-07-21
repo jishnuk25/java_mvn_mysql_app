@@ -46,14 +46,14 @@ public class App {
 			Class.forName("com.mysql.jdbc.Driver");
 			log("Congrats - Seems your MySQL JDBC Driver Registered!");
 		} catch (ClassNotFoundException e) {
-			log("Sorry, couldn't found JDBC driver. Make sure you have added JDBC Maven Dependency Correctly");
+			log("Sorry, couldn't find JDBC driver. Make sure you have added JDBC Maven Dependency Correctly");
 			e.printStackTrace();
 			return;
 		}
  
 		try {
 			// DriverManager: The basic service for managing a set of JDBC drivers.
-			crunchifyConn = DriverManager.getConnection("jdbc:mysql://localhost:3306/crunchify", "root", "root");
+			crunchifyConn = DriverManager.getConnection("jdbc:mysql://localhost:3306/crunchify", "Admin", "Admin@777");
 			if (crunchifyConn != null) {
 				log("Connection Successful! Enjoy. Now it's time to push data");
 			} else {
