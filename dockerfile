@@ -1,6 +1,6 @@
 FROM openjdk:8-jre-alpine3.9
 
-WORKDIR /
+WORKDIR /target
 
 
 # exposing the 8080 port for application access
