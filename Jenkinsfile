@@ -21,7 +21,7 @@ pipeline {
             steps {
                 dir("target/") {
                 sh 'pwd'
-                build -t "${ARTIFACTID}:${VERSION}"
+                build "-t" "${ARTIFACTID}:${VERSION}"
                 }
             }
         }   
