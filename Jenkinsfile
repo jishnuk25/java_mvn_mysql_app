@@ -19,7 +19,7 @@ pipeline {
         }
         stage('Run') {
             agent {
-                Dockerfile true
+                dockerfile true
             }
             steps {
                 echo "running container"
