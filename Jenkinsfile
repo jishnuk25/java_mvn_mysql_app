@@ -19,7 +19,7 @@ pipeline {
         }
         stage('Build container image') {
             steps {
-                build '-t ${DOCKERID}/${ARTIFACTID}:${VERSION} .'
+                build "-t ${DOCKERID}/${ARTIFACTID}:${VERSION} ."
             }
         }   
     }
