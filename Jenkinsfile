@@ -19,9 +19,10 @@ pipeline {
         }
         stage('Build container image') {
             steps {
-                dir("target/")
+                dir("target/") {
                 sh 'pwd'
                 build "-t ${DOCKERID}/${ARTIFACTID}:${VERSION} ."
+                }
             }
         }   
     }
